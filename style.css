@@ -1,0 +1,110 @@
+body {
+  margin: 50; padding: 50;
+  font-family: 'Exo 2', sans-serif;
+  background-color: #537895;
+  background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+
+}
+
+body a {
+  text-decoration: none;
+  margin: 0 .8em;
+}
+
+.card {
+  position: absolute;
+  top: 50%; left: 50%;
+  height: 400px; width: 300px;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: .5s;
+}
+
+.card:hover .card-front {
+  transform: rotateX(-180deg);
+}
+
+.card:hover .card-back {
+  transform: rotateX(0deg);
+}
+
+.card-back h2 {
+  margin: 50% auto 35% auto;
+  font-size: 25px;
+  color: #D3D3D3;
+}
+
+.card-back h2 span {
+  font-size: 13px;
+  color: #D3D3D3;
+}
+
+.card-front {
+  height: 100%; width: 100%;
+  position: absolute; margin: 0 .8em;
+  top: 0; left: 0;
+  
+  background: url(https://www.pngkey.com/png/full/59-598166_the-apple-of-eden-assassins-creed-movie-apple.png), repeat;
+  
+  background-position: 50% 50%;
+  background-size: cover;
+  
+  box-shadow: 0 8px
+              32px 0
+              rgba( 31, 38, 135, 0.37 );
+  
+  opacity: 0.9;
+  
+  border-radius: 10px;
+  border: 1px solid
+          rgba( 255, 255, 255, 0.18 );
+  
+  backface-visibility: hidden;
+  transform: rotateX(0deg); transition: .5s;
+}
+
+.card-back {
+  height: 100%; width: 100%;
+  position: absolute; margin: 0 .8em;
+  
+  background: rgba( 3, 39, 123, 0.5 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 10.0px );
+  -webkit-backdrop-filter: blur( 10.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  backface-visibility: hidden;
+  transform: rotateX(180deg); transition: .5s;
+  color: #FF4A54;
+  text-align: center;
+}
+
+.card-back a {
+    margin: 0 .8em;
+    border-radius: 50%;
+    color: #132020;
+}
+
+.card-back a i {
+    font-size: 1.8em;
+    padding: 0.2em;
+    transition: color 0.4s;
+}
+
+.card-back a:hover {
+  margin: 0 .8em;
+  color: #D3D3D3;
+  
+  -webkit-box-shadow: -3px 7px
+                      67px 28px
+                      rgba(255, 165, 0, 1);
+  
+  -moz-box-shadow: -3px 7px
+                   67px 28px
+                   rgba(255, 165, 0, 1);
+  
+  box-shadow: 0px 50px
+              100px 0px
+              rgba(255, 165, 0, 1);
+}
